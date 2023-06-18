@@ -5,8 +5,6 @@ import * as fileContent from "./fileContent.mjs";
 import fs from "node:fs";
 import fsPromises from "node:fs/promises";
 
-logBeginMessage();
-
 fs.mkdirSync('client');
 console.log(chalk.blue("./client directory created"));
 fs.mkdirSync('client/TS', {recursive: true});
@@ -20,23 +18,30 @@ console.log(chalk.blue("./server directory created"));
 fs.mkdirSync('server/dist', {recursive: true});
 console.log(chalk.blue("./server/dist directory created"));
 
-fsPromises.writeFile('package.json', fileContent.packageJsonContent).then(() => console.log(chalk.blue('package.json file written successfully')));
-fsPromises.writeFile('package-lock.json', fileContent.packageJsonLockContent).then(() => console.log(chalk.blue('package-lock.json file written successfully')));
-fsPromises.writeFile('tsconfig.json', fileContent.tsconfigJsonContent).then(() => console.log(chalk.blue('tsconfig.json written successfully')));
-fsPromises.writeFile('README.md', fileContent.readmeContent).then(() => console.log(chalk.blue("README.md written successfully")));
-fsPromises.writeFile('.gitignore', fileContent.gitignoreContent).then(() => console.log(chalk.blue(".gitignore written successfully")));
+fs.writeFileSync('package.json', fileContent.packageJsonContent);
+console.log(chalk.blue('package.json file written successfully'));
+fs.writeFileSync('package-lock.json', fileContent.packageJsonLockContent)
+console.log(chalk.blue('package-lock.json file written successfully'))
+fs.writeFileSync('tsconfig.json', fileContent.tsconfigJsonContent);
+console.log(chalk.blue('tsconfig.json written successfully'))
+fs.writeFileSync('README.md', fileContent.readmeContent)
+console.log(chalk.blue("README.md written successfully"))
+fs.writeFileSync('.gitignore', fileContent.gitignoreContent)
+console.log(chalk.blue(".gitignore written successfully"));
 
 
 if(fs.existsSync('client')) {
     fs.writeFileSync('client/index.html', fileContent.clientIndexHTMLcontent);
-    console.log("index.html written successfully");
+    console.log(chalk.blue("index.html written successfully"));
 }
 
 if(fs.existsSync('server')) {
     fs.writeFileSync('server/server.ts', fileContent.serverTsContent);
-    console.log("server.ts written successfully");
+    console.log(chalk.blue("server.ts written successfully"));
 }
 
+
+logBeginMessage();
 
 
 
