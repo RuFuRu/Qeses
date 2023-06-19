@@ -38,24 +38,25 @@ fs.writeFileSync(dir + '/.gitignore', fileContent.gitignoreContent)
 console.log(chalk.blue(".gitignore written successfully"));
 
 
-if(fs.existsSync('client')) {
-    fs.writeFileSync('client/index.html', fileContent.clientIndexHTMLcontent);
+if(fs.existsSync(dir + '/client')) {
+    fs.writeFileSync(dir + '/client/index.html', fileContent.clientIndexHTMLcontent);
     console.log(chalk.blue("index.html written successfully"));
 }
 
-if(fs.existsSync('server')) {
-    fs.writeFileSync('server/server.ts', fileContent.serverTsContent);
+if(fs.existsSync(dir + '/server')) {
+    fs.writeFileSync(dir + '/server/server.ts', fileContent.serverTsContent);
     console.log(chalk.blue("server.ts written successfully"));
 }
 
 
 logBeginMessage();
 
-console.log("Instructions");
-console.log(`           1.Run npm run buildServer`);
-console.log(`           2.Enter the http://localhost at the given port`);
-
-console.log(dir + "/");
+console.log("Setup: ");
+console.log(`           1.Enter ${dir !== "." ? dir : "current directory"}`);
+console.log(`           2.Run npm install`);
+console.log(`           3.Run npm run compileServer or npm run compileServer:watch`);
+console.log(`           4.Run npm run dev`);
+console.log(`           5.Enter the http://localhost at the given port`);
 
 
 
