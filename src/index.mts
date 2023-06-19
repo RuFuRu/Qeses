@@ -3,7 +3,6 @@ import chalk from "chalk";
 import logBeginMessage from "./beginMessage.mjs";
 import * as fileContent from "./fileContent.mjs";
 import fs from "node:fs";
-import fsPromises from "node:fs/promises";
 
 fs.mkdirSync('client');
 console.log(chalk.blue("./client directory created"));
