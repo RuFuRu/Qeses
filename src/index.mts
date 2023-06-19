@@ -43,6 +43,10 @@ if(fs.existsSync('server')) {
 
 logBeginMessage();
 
+console.log("Instructions");
+console.log(`           1.Run npm run compile`);
+console.log(`           2.Enter the http://localhost at the given port`)
+
 
 
 
