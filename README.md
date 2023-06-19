@@ -1,15 +1,15 @@
-# QSS - Quick Static Server for Typescript Development
+# Qeses - Quick Static Server for Typescript Development
 * [Description](#description)
 * [Download](#download)
 * [Usage](#usage)
 
 # Description
 
-QSS is a CLI that creates a simple static server, for serving static files on localhost, written in Node and Typescript, powered by ESbuild. It is blazingly fast, does not abstract anything and is customisable to the extreme.   
+Qeses is a CLI that creates a simple static server, for serving static files on localhost, written in Node and Typescript, powered by ESbuild. It is blazingly fast, does not abstract anything and is customisable to the extreme.   
 
 # Download
 
-Run `npx qss [directory]` and follow the instructions in the terminal
+Run `npx qeses [directory]` and follow the instructions in the terminal
 
 
 # Usage
