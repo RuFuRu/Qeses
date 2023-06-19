@@ -13,7 +13,12 @@
     "type": "git",
     "url": "https://github.com/RuFuRu/Qeses.git"
   },
-  "keywords": [],
+  "keywords": [
+    "quick-static-server",
+    "node",
+    "typescript",
+    "esbuild"
+  ],
   "author": "RuFuRu",
   "license": "MIT",
   "dependencies": {
