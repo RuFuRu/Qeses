@@ -4,7 +4,7 @@ const packageJsonContent = `{
     "description": "",
     "main": "index.js",
     "scripts": {
-      "buildServer": "esbuild client/TS/main.ts --bundle --minify --target=es2020 --outdir='client/JS'",
+      "buildClient": "esbuild client/TS/main.ts --bundle --minify --target=es2020 --outdir='client/JS'",
       "compileServer": "tsc server/server.ts --outdir server/dist",
       "compileServer:watch": "tsc server/server.ts --outdir server/dist --watch",
       "dev": "nodemon server/dist/server.js"
