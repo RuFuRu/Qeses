@@ -14,10 +14,6 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.2.0",
-    "esbuild": "^0.18.4",
-    "inquirer": "^9.2.7"
-  },
-  "devDependencies": {
-    "@types/inquirer": "^9.0.3"
+    "esbuild": "^0.18.4"
   }
 }
