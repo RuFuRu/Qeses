@@ -1,10 +1,10 @@
 {
-  "name": "qss",
+  "name": "qeses",
   "version": "1.0.0",
-  "description": "",
+  "description": "Qeses is a CLI that creates a simple static server, for serving static files on localhost, written in Node and Typescript, powered by ESbuild. It is blazingly fast, does not abstract anything and is customisable to the extreme.",
   "main": "bin/index.js",
   "bin": {
-    "qss": "./bin/index.js"
+    "qeses": "./bin/index.js"
   },
   "scripts": {
     "compile": "esbuild src/index.mts --bundle --minify --platform=node --target=node18 --outdir='bin'"

@@ -8,7 +8,7 @@ function logBeginMessage() {
     ${chalk.redBright('////                                 ////')}
     ${chalk.redBright('////                                 ////')}
     ${chalk.redBright('////                                 ////')}
-    ${chalk.redBright(`////       ${chalk.greenBright("Thanks for using QSS")}      ////`)}
+    ${chalk.redBright(`////      ${chalk.greenBright("Thanks for using qeses")}     ////`)}
     ${chalk.redBright('////                                 ////')}
     ${chalk.redBright('////                                 ////')}
     ${chalk.redBright('////                                 ////')}
