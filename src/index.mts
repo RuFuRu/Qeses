@@ -2,30 +2,39 @@
 import chalk from "chalk";
 import logBeginMessage from "./beginMessage.mjs";
 import * as fileContent from "./fileContent.mjs";
+import * as args from "./args.js";
 import fs from "node:fs";
 
-fs.mkdirSync('client');
+let dir = args.argDirectory();
+
+if(dir !== "Bad argument" && dir !== ".") {
+    fs.mkdirSync(dir, {recursive: true});
+} else {
+    dir = ".";
+}
+
+fs.mkdirSync(dir + '/client', {recursive: true});
 console.log(chalk.blue("./client directory created"));
-fs.mkdirSync('client/TS', {recursive: true});
+fs.mkdirSync(dir + '/client/TS', {recursive: true});
 console.log(chalk.blue("./client/TS directory created"));
-fs.mkdirSync('client/JS', {recursive: true});
+fs.mkdirSync(dir + '/client/JS', {recursive: true});
 console.log(chalk.blue("./client/JS directory created"));
-fs.mkdirSync('client/CSS', {recursive: true})
+fs.mkdirSync(dir + '/client/CSS', {recursive: true})
 console.log(chalk.blue("./client/CSS directory created"));
-fs.mkdirSync('server');
+fs.mkdirSync(dir + '/server', {recursive: true});
 console.log(chalk.blue("./server directory created"));
-fs.mkdirSync('server/dist', {recursive: true});
+fs.mkdirSync(dir + '/server/dist', {recursive: true});
 console.log(chalk.blue("./server/dist directory created"));
 
-fs.writeFileSync('package.json', fileContent.packageJsonContent);
+fs.writeFileSync(dir + '/package.json', fileContent.packageJsonContent);
 console.log(chalk.blue('package.json file written successfully'));
-fs.writeFileSync('package-lock.json', fileContent.packageJsonLockContent)
+fs.writeFileSync(dir + '/package-lock.json', fileContent.packageJsonLockContent)
 console.log(chalk.blue('package-lock.json file written successfully'))
-fs.writeFileSync('tsconfig.json', fileContent.tsconfigJsonContent);
+fs.writeFileSync(dir + '/tsconfig.json', fileContent.tsconfigJsonContent);
 console.log(chalk.blue('tsconfig.json written successfully'))
-fs.writeFileSync('README.md', fileContent.readmeContent)
+fs.writeFileSync(dir + '/README.md', fileContent.readmeContent)
 console.log(chalk.blue("README.md written successfully"))
-fs.writeFileSync('.gitignore', fileContent.gitignoreContent)
+fs.writeFileSync(dir + '/.gitignore', fileContent.gitignoreContent)
 console.log(chalk.blue(".gitignore written successfully"));
 
 
@@ -43,8 +52,10 @@ if(fs.existsSync('server')) {
 logBeginMessage();
 
 console.log("Instructions");
-console.log(`           1.Run npm run compile`);
-console.log(`           2.Enter the http://localhost at the given port`)
+console.log(`           1.Run npm run buildServer`);
+console.log(`           2.Enter the http://localhost at the given port`);
+
+console.log(dir + "/");
 
 
 
