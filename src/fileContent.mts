@@ -819,30 +819,7 @@ const tsconfigJsonContent = `{
 }
 `;
 
-const readmeContent = `# Static-Node-Server
-* [Description](#description)
-* [Download](#download)
-* [Usage](#usage)
-
-# Description
-
-Static-Node-Server is a simple, static web server, written in regular Node and Typescript for serving static files on localhost. It doesn't abstract anything and is very customisable. It additionally comes with ESbuild for blazingly fast building.
-
-# Download
-
-For now to use this, you will need to clone this repository via \`git clone.\`. Then run \`npm install\` to install all the dependencies.
-
-
-# Usage
-
-Once you install it write all the client code in \`/client\` directory however you desire and build it with \`npm run build\`.
-Afterwards you can view the app on localhost by running
-\`npm run dev\` and entering \`http://localhost:PORT/\`, in the browser, where PORT is the port number , that the server is running on, by default - \`3215\`
-
-You can customise the node server code, to suit your needs in \`/server\` directory if you so desire
-
-All other built-in scripts are in \`package.json\` and you can add your own.
-
+const readmeContent = `# Write your readme here
 `
 
 const gitignoreContent = `node_modules
