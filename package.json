@@ -1,6 +1,6 @@
 {
   "name": "qeses",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Qeses is a CLI that creates a simple static server, for serving static files on localhost, written in Node and Typescript, powered by ESbuild. It is blazingly fast, does not abstract anything and is customisable to the extreme.",
   "main": "bin/index.js",
   "bin": {
