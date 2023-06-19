@@ -9,6 +9,10 @@
   "scripts": {
     "compile": "esbuild src/index.mts --bundle --minify --platform=node --target=node18 --outdir='bin'"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RuFuRu/qss"
+  },
   "keywords": [],
   "author": "RuFuRu",
   "license": "MIT",
